@@ -1,6 +1,7 @@
 from django.db import models
 from django.urls import reverse
-# Create your models here.
+from django.contrib.auth.models import AbstractBaseUser
+
 class Category(models.Model):
     category_name = models.CharField(max_length=190,unique=True)
     slug = models.SlugField(max_length=90, unique=True)
@@ -84,3 +85,6 @@ class CartItem(models.Model):
 
     def __unicode__(self):
         return self.product
+
+
+

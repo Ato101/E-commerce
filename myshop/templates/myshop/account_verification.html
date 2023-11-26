@@ -1,0 +1,9 @@
+{% autoescape off %}
+
+HI {{user.first_name}}
+please click on below link to activate your registrations
+http://{{domain}} {% url 'myshop:activate' uidb64=uid token=token %}
+if you think it's not you,please ignore this mail
+
+{% endautoescape %}
+
